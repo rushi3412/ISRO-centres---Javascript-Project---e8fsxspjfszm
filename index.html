@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ISRO Research Centers Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="website-name">
+      <span class="logo-container">
+        <img src="img/ISRO.png" alt="Logo" class="logo" />
+      </span>
+      <span class="word-container">
+        Indian Space Research Organization
+      </span>
+    </h1>
+
+    <div class="container">
+      <p>Search for ISRO centers based on place, state and name</p>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search here..." />
+        <button id="search-button" style="display: flex;
+        justify-content: center;">Search</button>
+      
+      <div class="button-container">
+        <button class="category-button" data-category="city">City</button>
+        <button class="category-button" data-category="state">State</button>
+        <button class="category-button" data-category="center">Center</button>
+      </div>
+
+    <div id="results-container"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
 
