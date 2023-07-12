@@ -1,1 +1,117 @@
 
+body {
+  background-image: url("img/moon.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.word-container {
+  text-align: left;
+}
+
+h1 {
+  font-family: Trebuchet MS;
+  color: white;
+}
+
+.container p {
+  line-height: 2.5;
+  color: #3a3b3b;
+  font-family: Trebuchet MS;
+  border: 1px solid white;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#search-input {
+  height: 35px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-box {
+  margin-bottom: 10px;
+}
+
+#search-button {
+  border-radius: 10px;
+  background-color: #334e68;
+  color: white;
+  border: 1px solid white;
+  padding: 15px 16px;
+  margin-right: 5px;
+  font-weight: bold;
+  margin: 0.5%;
+  margin-left: 5px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.category-button {
+  margin: 0 5px;
+}
+
+button.category-button {
+  border-radius: 10px;
+  background-color: #334e68;
+  color: white;
+  border: 1px solid white;
+  padding: 15px 16px;
+  font-weight: bold;
+  margin: 5px;
+}
+
+button.category-button.active {
+  background-color: #577ea6;
+}
+
+.result-card {
+  border: 1px solid white;
+  text-align: left;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  width: 100%; 
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.random-result {
+  width: 100%; 
+  text-align: left; 
+}
+
+.align-left {
+  text-align: left;
+}
+
