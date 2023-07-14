@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -10,7 +10,7 @@
   <body>
     <h1 id="website-name">
       <span class="logo-container">
-        <img src="Indian_Space_Research_Organisation_Logo.svg.png" alt="Logo" class="logo" />
+        <img src="img/ISRO.png" alt="Logo" class="logo" />
       </span>
       <span class="word-container">
         Indian Space Research Organization
@@ -22,19 +22,20 @@
     </div>
 
     <div class="search-container">
+      <div class="search-box">
         <input type="text" id="search-input" placeholder="Search here..." />
-        <button id="search-button" style="display: flex;
-        justify-content: center;">Search</button>
-      
+        <button id="search-button">Search</button>
+      </div>
+
       <div class="button-container">
         <button class="category-button" data-category="city">City</button>
         <button class="category-button" data-category="state">State</button>
         <button class="category-button" data-category="center">Center</button>
       </div>
+    </div>
 
     <div id="results-container"></div>
 
     <script src="script.js"></script>
   </body>
 </html>
-
