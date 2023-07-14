@@ -1,4 +1,3 @@
-
 const searchInput = document.getElementById("search-input");
 const categoryButtons = document.querySelectorAll(".category-button");
 const searchButton = document.getElementById("search-button");
@@ -103,29 +102,37 @@ function renderResults(data) {
   // Clear previous results
   clearResults();
 
-  data.forEach((center) => {
-    const card = document.createElement("div");
-    card.classList.add("result-card");
+  if (data.length === 0) {
+    // Display "No center or lab found" message
+    const noResultsMessage = document.createElement("div");
+    noResultsMessage.classList.add("no-results");
+    noResultsMessage.textContent = "NO CENTER OR LAB FOUND!!!";
+    resultsContainer.appendChild(noResultsMessage);
+  } else {
+    data.forEach((center) => {
+      const card = document.createElement("div");
+      card.classList.add("result-card");
 
-    // Check if the result is from random generation
-    if (searchInput.value.trim() === "") {
-      card.classList.add("random-result");
-    }
+      // Check if the result is from random generation
+      if (searchInput.value.trim() === "") {
+        card.classList.add("random-result");
+      }
 
-    card.innerHTML = `
-      <h2>${center.name}</h2>
-      <p>CITY: ${center.Place}</p>
-      <p>STATE: ${center.State}</p>
-    `;
-    resultsContainer.appendChild(card);
-  });
+      card.innerHTML = `
+        <h2>${center.name}</h2>
+        <p>CITY: ${center.Place}</p>
+        <p>STATE: ${center.State}</p>
+      `;
+      resultsContainer.appendChild(card);
+    });
 
-  categoryButtons.forEach((button) => {
-    button.classList.remove("active");
-    if (button.dataset.category === selectedCategory) {
-      button.classList.add("active");
-    }
-  });
+    categoryButtons.forEach((button) => {
+      button.classList.remove("active");
+      if (button.dataset.category === selectedCategory) {
+        button.classList.add("active");
+      }
+    });
+  }
 }
 
 // Event listener for the search button click
